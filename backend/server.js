@@ -5,7 +5,7 @@ import cors from "cors"
 const app = express();
 app.use(cors())
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
     res.send("Weather server is running!");
@@ -46,6 +46,6 @@ app.get("/api/weather/:location", async (req, res) => {
 
 });
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
     console.log(`App started on port ${port}`);
 });
