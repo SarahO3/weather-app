@@ -124,6 +124,61 @@ translateY(0);
 
 }
 
+
+.today-date {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    opacity: .8;
+}
+
+#forecastContainer {
+    margin-top: 25px;
+}
+
+#forecastContainer h2 {
+    margin-bottom: 15px;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.forecast-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px 10px;
+    text-align: center;
+    color: #222;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+    transition: transform .3s ease, box-shadow .3s ease;
+    animation: fadeIn .5s ease;
+}
+
+.forecast-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .16);
+}
+
+.forecast-card h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.forecast-icon {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.forecast-card p {
+    margin: 6px 0;
+    font-size: .9rem;
+}
+
         footer{
             margin-top:30px;
             text-align:center;
@@ -131,3 +186,37 @@ translateY(0);
         }
 
     
+        @media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    header {
+        font-size: 1.5rem;
+    }
+
+    input {
+        width: 65%;
+    }
+
+    button {
+        width: 30%;
+        padding: 10px 5px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .temp {
+        font-size: 2.5rem;
+    }
+
+    .forecast-grid {
+        grid-template-columns: 1fr;
+    }
+}
