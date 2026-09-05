@@ -3,7 +3,11 @@ import express from "express";
 import cors from "cors"
 
 const app = express();
-app.use(cors())
+
+//since our frontend is now live ...we restrict cors to communicate with it alone directly
+app.use(cors({
+    origin: "https://weather-app-frontend-o17d.onrender.com"
+}))
 
 const port = process.env.PORT || 5000;
 

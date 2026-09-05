@@ -39,6 +39,7 @@ function showError(message) {
 }
 
 
+
 function showLoading() {
     weatherContainer.innerHTML = "<p>Loading weather...</p>";
 }
