@@ -48,7 +48,7 @@ function showLoading() {
 
 async function fetchWeather(location = "Lagos") {
     const response = await fetch(
-        `http://localhost:5000/api/weather/${encodeURIComponent(location)}`
+        ` https://weather-app-hq08.onrender.com/api/weather/${encodeURIComponent(location)}`
     );
 
     if (!response.ok) {
